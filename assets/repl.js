@@ -261,7 +261,7 @@ async function processOrder(customerId, sku, orderQty, customerLocation) {
 
     console.log('Order processed successfully');
     console.log('Customer ID:', customer.cust_Id);
-    console.log('SKU:', sku);
+    console.log('SKU:', skuu._id);
     console.log('Order Quantity:', orderQty);
     console.log('Customer Location:', customerLocation);
     console.log('Warehouse ID:', nearestWarehouse.warehouse_Id);
