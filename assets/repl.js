@@ -242,30 +242,30 @@ async function processOrder(customerId, sku, orderQty, customerLocation) {
       return;
     }
 
-    const skuu = Product.findOne({sku_Id: sku});
-    // const whID = Product.findOne({sku_Id: sku});
+    const skuu = await Product.findOne({sku_Id: sku});
+
+    // console.log(skuu._id);
+    // console.log("~~~~~~~~~~~~~~~~~");
+    // console.log(nearestWarehouse._id);
 
     // Find the stock entry for the requested SKU in the nearest warehouse
-    // const stockEntry = await Stock.findOne({
-    //   sku_Id: skuu._id,
-    //   warehouse_Id: nearestWarehouse._id,
-    // });
+    const stockEntry = await Stock.findOne({
+      sku_Id: skuu._id,
+      warehouse_Id: nearestWarehouse._id,
+    });
 
-    console.log(skuu.populate('sku_Id'));
-    console.log("--------------");
-    console.log(nearestWarehouse);
-    // if (!stockEntry || stockEntry.stock_quantity < orderQty) {
-    //   console.log('Out of stock');
-    //   return;
-    // }
+    if (!stockEntry || stockEntry.stock_quantity < orderQty) {
+      console.log('Out of stock');
+      return;
+    }
 
-    // console.log('Order processed successfully');
-    // console.log('Customer ID:', customer.cust_Id);
-    // console.log('SKU:', sku);
-    // console.log('Order Quantity:', orderQty);
-    // console.log('Customer Location:', customerLocation);
-    // console.log('Warehouse ID:', nearestWarehouse.warehouse_Id);
-    // console.log('Warehouse Location:', nearestWarehouse.loca_tion);
+    console.log('Order processed successfully');
+    console.log('Customer ID:', customer.cust_Id);
+    console.log('SKU:', sku);
+    console.log('Order Quantity:', orderQty);
+    console.log('Customer Location:', customerLocation);
+    console.log('Warehouse ID:', nearestWarehouse.warehouse_Id);
+    console.log('Warehouse Location:', nearestWarehouse.loca_tion);
 
   } catch (error) {
     console.error('Error processing order:', error);
