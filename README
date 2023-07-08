@@ -43,17 +43,15 @@ Sample: ADD STATE KARNATAKA
 Command: VIEW STATE <state>
 Sample: VIEW STATE KARNATAKA
 
-6. LIST PRODUCTS : Lists all the products
+6. LIST PRODUCTS : Lists info off all the products
 
-Command: 
-Sample: 
+Command: LIST PRODUCTS
 
-7. LIST WAREHOUSES :
+7. LIST WAREHOUSES : Lists all the warehouse 
 
-Command: 
-Sample: 
+Command: LIST WAREHOUSES
 
-8. WAREHOUSE INFO : View information about a specific warehouse.
+8. WAREHOUSE INFO : View information about a specific warehouse in a state.
 
 Command: WAREHOUSE INFO <warehouse_Id>
 Sample: WAREHOUSE INFO KA9080
@@ -61,7 +59,7 @@ Sample: WAREHOUSE INFO KA9080
 9. ADD CUSTOMER:
 
 Command: ADD CUSTOMER <Customer_ID> <Customer_Name> <Customer_Location>
-Sample: 
+Sample: ADD CUSTOMER ID5 Swati Tumkur
 
 10. PROCESS ORDER : Process an order for a customer.
 
