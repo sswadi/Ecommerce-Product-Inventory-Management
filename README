@@ -1,0 +1,75 @@
+**Ecom Product Management System**
+This is a command-line application that allows you to manage products, warehouses, stocks, and process orders for an e-commerce product management system.
+
+**INSTALLATION**
+Clone the repository:
+
+--> git clone https://github.com/your-username/ecom-product-management.git
+
+Install the dependencies:
+
+--> cd ecom-product-management
+    npm install
+
+Set up the database:
+
+--> Ensure you have MongoDB installed and running.
+    Configure the database connection in config/mongoose.js.
+
+**USAGE**
+
+1. ADD PRODUCT: Add a new product to the catalogue
+
+Command: ADD PRODUCT <product_Name> <sku_Id> <category> <sub_category> <image>
+Sample: ADD PRODUCT Blue_Shirt 555 Apparel Tees https://example.com/btee.jpg
+
+2. ADD WAREHOUSE: Add a new warehouse to the system.
+
+Command: ADD WAREHOUSE <warehouse_Id> <warehouse_Name> <state> <location> <stockLimit>
+Sample: ADD WAREHOUSE 123 Warehouse1 KARNATAKA Tumkur 100
+
+3. ADD STOCK: Add stock quantity for a specific SKU in a warehouse.
+
+Command: ADD STOCK <sku_Id> <warehouse_Id> <stock_quantity>
+Sample: ADD STOCK 12 KA9080 5
+
+4. ADD STATE : Register a new state to DB.
+
+Command: ADD STATE <state>
+Sample: ADD STATE KARNATAKA
+
+5. VIEW STATE : View information about a specific state.
+
+Command: VIEW STATE <state>
+Sample: VIEW STATE KARNATAKA
+
+6. LIST PRODUCTS : Lists all the products
+
+Command: 
+Sample: 
+
+7. LIST WAREHOUSES :
+
+Command: 
+Sample: 
+
+8. WAREHOUSE INFO : View information about a specific warehouse.
+
+Command: WAREHOUSE INFO <warehouse_Id>
+Sample: WAREHOUSE INFO KA9080
+
+9. ADD CUSTOMER:
+
+Command: ADD CUSTOMER <Customer_ID> <Customer_Name> <Customer_Location>
+Sample: 
+
+10. PROCESS ORDER : Process an order for a customer.
+
+Command: PROCESS ORDER <Customer_ID> <SKU> <Order_Quantity> <Customer_Location>
+Sample: PROCESS ORDER ID5 555 1 tumkur
+
+
+
+
+
+
